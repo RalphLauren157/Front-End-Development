@@ -5,17 +5,67 @@ body{
     flex-direction: column; /*Stacks items vertically*/
     justify-content: center; /*Centers items vertically*/
     align-items: center; /*Centers items horizontally*/
-    height: 100vh; /*full viewport height*/
-    margin: 0;
+   /* height: 100vh; /*full viewport height*/
+   margin: 0;
 }
-p {
-    font-family: 'Noto Sans SC', sans-serif; /*Selects font*/
-    font-weight: 800; /* sets the boldness of the text*/
-    font-size:6pc;
+article{
+    font-family: 'Noto Sans SC', sans-serif; /*Selects font for all text*/
     color: #052234;
     text-align: center; /*centres the text to the horizontal middle*/
     margin: 0;
+    padding: 0;
 }
-.logo {
+.name{
+    font-weight: 800; /* sets the boldness of the text*/
+    font-size:6pc;
+}
+.logo{
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    max-width: 400px;
+    height: auto;
+    display: block;
+}
+.welcome{
+    font-weight: 700;
+    font-size: 4pc;
+}
+nav{
+    font-family: 'Noto Sans SC', sans-serif; /*Selects font for all text*/
+    background-color: #052234;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 4px 0px 0px #000000;
+}
+.navbar-left div {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.navbar-left div:hover, 
+.navbar-right div:hover{
+    color: #f4ca7e;
+}
+.navbar-left,
+ .navbar-right{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.navbar-left > *{ 
+    margin-left: 10px;
+}
+.sign-up,
+.log-in{
     
+    font-weight: 500;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+    margin: 10px;
 }
