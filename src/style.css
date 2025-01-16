@@ -1,0 +1,21 @@
+
+body{
+    background-color: #f4ca7e;
+    display:flex;
+    flex-direction: column; /*Stacks items vertically*/
+    justify-content: center; /*Centers items vertically*/
+    align-items: center; /*Centers items horizontally*/
+    height: 100vh; /*full viewport height*/
+    margin: 0;
+}
+p {
+    font-family: 'Noto Sans SC', sans-serif; /*Selects font*/
+    font-weight: 800; /* sets the boldness of the text*/
+    font-size:6pc;
+    color: #052234;
+    text-align: center; /*centres the text to the horizontal middle*/
+    margin: 0;
+}
+.logo {
+    
+}
