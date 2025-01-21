@@ -110,7 +110,6 @@ nav{
     flex: 1;
 }
 .aboutus-left{
-    /* position: fixed; */
     left: 10px;
     width: 45%;
     padding: 15px;
@@ -132,4 +131,20 @@ nav{
     border: none; 
     border-radius: 20px; 
     cursor: pointer; /* Change cursor to a pointer when hovering */
+}
+.media{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+.media .image-left img,
+.media .image-right img {
+    flex: 1;
+    max-width: 600px;
+    max-height: 600px;
+    margin-bottom: 0;
+    
 }
