@@ -19,6 +19,7 @@ article{
     font-weight: 800; /* sets the boldness of the text*/
     font-size:6pc;
     margin-top: 0;
+    cursor: pointer;
 }
 .logo{
     margin: 5px 0;
@@ -34,6 +35,9 @@ article{
     font-weight: 700;
     font-size: 4pc;
 }
+header{
+    position: sticky;
+}
 nav{
     font-family: 'Noto Sans SC', sans-serif; /*Selects font for all text*/
     background-color: #052234;
@@ -48,6 +52,11 @@ nav{
 }
 .navbar-left, .Home, .Menu, .Contact{
     cursor: pointer;
+}
+.navbar-left a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 .navbar-left svg {
     margin-right: 20;
@@ -99,6 +108,7 @@ nav{
     background-color: #052234;
 }
 .splitscreen-info{
+    margin-left: 55px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -110,10 +120,11 @@ nav{
     flex: 1;
 }
 .aboutus-left{
-    left: 10px;
+    margin-left: 10px;
     width: 45%;
     padding: 15px;
     margin-top: 0;
+
 }
 .aboutus-right {
     width: 45%; 
@@ -137,14 +148,15 @@ nav{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30px;
     width: 100%;
+    margin: 0;
 }
 .media .image-left img,
 .media .image-right img {
     flex: 1;
-    max-width: 600px;
-    max-height: 600px;
+    /* width: 50%; */
+    height: 80vh;
+    object-fit: cover;
     margin-bottom: 0;
     
 }
