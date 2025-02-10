@@ -71,6 +71,7 @@ header{
     left:0;
     right: 0;
     width: 100vw;
+    padding: 1rem;
     box-sizing: border-box;
 }
 .ham-menu{
@@ -301,4 +302,19 @@ header{
     gap: 100px; /* Adds space between the cards */
     margin-top: 100px;
     margin-bottom: 100px;
+}
+.basket-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.remove-item {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
 }
