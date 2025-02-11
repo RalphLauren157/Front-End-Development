@@ -1,33 +1,41 @@
-let basket = [];
+let basket = JSON.parse(sessionStorage.getItem("basket")) || [];
 
 document.addEventListener("DOMContentLoaded", () => {
-    const basketContainer = document.getElementById("basket-items")
+    const basketItemsList = document.getElementById("basket-items")
     const orderNowButtons = document.querySelectorAll(".btn.btn-primary"); //Selecting all the order now buttons
 
     function updateBasketUI() {
-        basketContainer.innerHTML = ""; //Clear previous content
+        if (!basketItemsList) return; //Prevents errors on pages without a basket
+        basketItemsList.innerHTML = ""; //Clear previous content
 
         if (basket.length === 0) {
-            basketContainer.innerHTML = "<p>Your Basket is empty</p>";
+            basketItemsList.innerHTML = "<li class='list-group-item'>Your Basket is empty.</li>";
             return;
         }
 
         basket.forEach((item, index) => {
-            let itemElement = document.createElement("div");
-            itemElement.classList.add("basket.item");
-            itemElement.innerHTML = `
-                <p><strong>${item.name}</strong> - ${item.name}</p>
-                <button class="remove-item data-index="${index}">Remove</button>
-                `;
-                basketContainer.appendChild(itemElement);
+            let listItem = document.createElement("li");
+            listItem.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+            listItem.innerHTML = `
+                <span><strong>${item.name}</strong> - ${item.price}</span>
+                <button class="btn btn-danger btn-sm remove-item" data-index="${index}">Remove</button>
+            `;
+            basketItemsList.appendChild(listItem);
         });
 
         //Add event listeners for removing items
         document.querySelectorAll(".remove-item").forEach(button => {
             button.addEventListener("click", (event) => {
                 let index = event.target.getAttribute("data-index");
-                basket.splice(index, 1);
-                updateBasketUI();
+
+                //confirmation alert
+                let confirmRemoval = confirm("Are you sure you want to remove this item from the basket?");
+
+                if(confirmRemoval) {
+                    basket.splice(index, 1);
+                sessionStorage.setItem("basket", JSON.stringify(basket)); // Save updated basket
+                updateBasketUI(); // Refresh UI
+                }
             });
         });
     }
@@ -47,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: itemName,
                 price: itemPrice
             });
-
-            updateBasketUI();
+            sessionStorage.setItem("basket", JSON.stringify(basket)); // Store in sessionStorage
+            updateBasketUI(); // Update UI
         });
     });
     updateBasketUI(); //initial UI update

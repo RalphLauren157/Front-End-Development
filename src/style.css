@@ -303,18 +303,37 @@ header{
     margin-top: 100px;
     margin-bottom: 100px;
 }
-.basket-item {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px 0;
+/* Basket List Items */
+#basket-items .list-group-item {
+    color: white;
+    background-color: #052234; /* Light grey background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px; /* More spacing */
+    margin-bottom: 10px; /* Space between items */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 25vw;
 }
-.remove-item {
-    background-color: red;
-    color: white;
+/* Hover effect */
+#basket-items .list-group-item:hover {
+    background-color: cornflowerblue; /* Slightly darker grey */
+    transform: scale(1.02); /* Subtle zoom effect */
+}
+/* Remove Button */
+#basket-items .remove-item {
+    background-color: #dc3545; /* Bootstrap danger red */
     border: none;
+    color: white;
+    font-size: 0.9rem;
     padding: 5px 10px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+/* Remove Button Hover */
+#basket-items .remove-item:hover {
+    background-color: #c82333; /* Darker red */
+    transform: scale(1.1); /* Slight pop effect */
 }
