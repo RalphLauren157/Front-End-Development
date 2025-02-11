@@ -337,3 +337,51 @@ header{
     background-color: #c82333; /* Darker red */
     transform: scale(1.1); /* Slight pop effect */
 }
+#subtotal-container {
+    color: #052234;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+#subtotal-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background-color: #052234;
+    margin-bottom: 15px;
+}
+.basket-buttons {
+    display: flex;
+    justify-content: start;
+    gap: 80px;
+}
+#clear-basket, #checkout {
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: bolder;
+    border-radius: 8px;
+    border: 2.5px solid transparent;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: auto;
+    text-align: center;
+    background: linear-gradient(45deg, #f4ca7e, #f4ca7e);
+    color: #052234;
+    border-color: #052234;
+    box-shadow: 0px 4px 10px rgba(244, 202, 126, 0.5);
+}
+#clear-basket:hover,
+#checkout:hover {
+    background: #f4ca7e;
+    color: white;
+    border-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px rgba(244, 202, 126, 0.7);
+}
