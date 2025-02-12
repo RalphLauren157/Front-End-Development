@@ -385,3 +385,98 @@ header{
     transform: translateY(-3px);
     box-shadow: 0px 6px 15px rgba(244, 202, 126, 0.7);
 }
+#clear-basket:active, #checkout:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+/* Auth Page Container */
+.auth-container {
+    background-color: #052234;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Authentication Box */
+.auth-box {
+    background-color: #f4ca7e;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(244, 202, 126, 0.5);
+    width: 350px;
+    text-align: center;
+}
+
+/* Form Title */
+.auth-box h2 {
+    color: #052234;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    color: #052234;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #052234;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Submit Button */
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(45deg, #052234, #254a69);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.auth-btn:hover {
+    background: #052234;
+    color: #f4ca7e;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px rgba(5, 34, 52, 0.7);
+}
+
+/* Toggle Signup/Login */
+.toggle-form {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #052234;
+}
+
+.toggle-form span {
+    color: cornflowerblue;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggle-form span:hover {
+    color: white;
+}
