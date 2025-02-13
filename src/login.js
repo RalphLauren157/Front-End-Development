@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const toggleForm = document.getElementById("toggle-login");
     const emailField = document.getElementById("email");
     const directLogin = document.getElementById("direct-login");
+    const usernameField = document.getElementById("username");
+    const passwordField = document.getElementById("password");
 
     let isSignup = true; // Start with signup mode
 
@@ -43,8 +45,30 @@ document.addEventListener("DOMContentLoaded", function() {
     window.location.href = "login.html?mode=login"; // Reload with login mode
     });
 
-    const sample = [{
+    //user credentials
+    const user = [{
             username: "user123",
-            password: "securePassword123"}
+            password: "secure123"}
     ];
+
+    //Handle log in
+    authBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        if (!isSignup) {
+            const username = usernameField.value.trim();
+            const password = passwordField.value.trim();
+
+            const validUser = user.find(user => user.username === username && user.password === password); //validates the entered details against the sample user details
+
+            if (validUser) {
+                alert(`Welcome, ${username}! You are now logged in.`);
+                window.location.href = "homepage.html";
+            } else {
+                alert("Incorrect username or password. Please try again.");
+                usernameField.value = ""; // Clear username and password field
+                passwordField.value = "";
+            }
+        }
+    });
 });
