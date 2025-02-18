@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (validUser) {
                 alert(`Welcome, ${username}! You are now logged in.`);
+                sessionStorage.setItem("loggedInUser", username); //store login status
                 window.location.href = "homepage.html";
             } else {
                 alert("Incorrect username or password. Please try again.");

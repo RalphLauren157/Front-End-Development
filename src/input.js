@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const orderNowButtons = document.querySelectorAll(".btn.btn-primary"); //Selecting all the order now buttons
     const clearBasketBtn = document.getElementById("clear-basket");
     const checkoutBtn = document.getElementById("checkout");
+    const notification = document.getElementById("notification");
 
     function updateSubtotal() {
         let subtotal = basket.reduce((sum, item) => sum + parseFloat(item.price.replace("£", "")), 0);
@@ -62,10 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
             //find the parent card of the clicked button
             let card = event.target.closest(".card1");
 
-            //Extract Item name and price
+            //Extract Item name and price and create notification
             let itemName = card.querySelector(".card-title").innerText;
             let itemPrice = card.querySelector(".btn.btn-primary").innerText;
-
+            showNotification(`${itemName} added to basket!`);
             //Add item to basket array
             basket.push({
                 name: itemName,
@@ -84,5 +85,19 @@ document.addEventListener("DOMContentLoaded", () => {
             updateBasketUI();
         }
     });
+
+    function showNotification(message) {
+        notification.textContent = message;
+        notification.classList.remove("hidden");
+        notification.classList.add("show");
+
+        setTimeout(() => {
+            notification.classList.remove("show");
+            setTimeout(() => {
+                notification.classList.add("hidden");
+            }, 500);
+        }, 2000); //hide after 2 secs
+    }
+    
     updateBasketUI(); //initial UI update
 });
