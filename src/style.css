@@ -11,7 +11,7 @@ article{
     font-family: 'Noto Sans SC', sans-serif; /*Selects font for all articles*/
     color: #052234;
     text-align: center; /*centres the text to the horizontal middle*/
-    margin: 0;
+    margin: 0; /*Erasing any preset margins and padding to text */
     padding: 0;
 }
 .name{
@@ -35,12 +35,12 @@ article{
     font-size: 4pc;
 }
 header{
-    position: sticky;
+    position: sticky; /* Ensures header is stuck to the top */
 }
 .off-screen-menu{
-    display: none;
+    display: none; /*Hiding the off screen menu in full screen*/
 }
-@media (max-width: 750px) {
+@media (max-width: 750px) { /*Sets the styling for the off screen menu on smaller screens*/
     .off-screen-menu{
         background-color: #052234;
         height: 100vh;
@@ -49,7 +49,7 @@ header{
         position: fixed;
         left: -300px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
         justify-content: space-evenly;
         align-items: start;
         text-align: center;
@@ -102,7 +102,6 @@ header{
     right: 0;
     width: 100vw;
     padding: 1rem;
-    /* box-sizing: border-box; */
 }
 .ham-menu{
     display: none;
@@ -122,7 +121,6 @@ header{
         left: 1rem;
         margin-left: auto;
         cursor: pointer;
-        /* z-index: 2000; */
     }
     .ham-menu span{
         height: 4px;
@@ -155,9 +153,6 @@ header{
     .navbar-left{
         visibility: hidden;
     }
-    /* .navbar-right{
-        visibility:hidden
-    } */
 }
 .navbar-left, .Home, .Menu, .Contact{
     cursor: pointer;
@@ -293,8 +288,8 @@ header{
 .chicken-card-container{
     margin-top: 50px;
     display: flex;
-    justify-content: center; /* Centers the cards horizontally */
-    align-items: flex-start; /* Aligns the cards vertically */
+    justify-content: center;
+    align-items: flex-start; 
     gap: 100px; /* Adds space between the cards */
     flex-wrap: nowrap;
     margin-bottom: 100px;
@@ -303,18 +298,18 @@ header{
     display: flex;
     flex-direction: column; /* Aligns card content vertically */
     justify-content: space-between; /* Spreads content evenly inside */
-    align-items: center; /* Centers content horizontally */
+    align-items: center;
     background-color: #052234;
-    width: 288px; /* Set a fixed width for uniformity */
-    height: 500px; /* Set a fixed height for uniformity */
+    width: 288px; 
+    height: 500px;
     padding: 20px; 
     text-align: center;
-    border-radius: 10px; /* Optional for rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    border-radius: 10px; /*rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
 }
 .card1:hover{
     background-color:cornflowerblue;
-    transform: scale(1.1);
+    transform: scale(1.1); /*Creates zoom effect on hover*/
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -340,29 +335,28 @@ header{
 }
 .burger-card-container{
     display: flex;
-    justify-content: center; /* Centers the cards horizontally */
-    align-items: flex-start; /* Aligns the cards vertically */
-    gap: 100px; /* Adds space between the cards */
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 100px;
     margin-top: 100px;
     margin-bottom: 100px;
 }
 .strips-card-container{
     display: flex;
-    justify-content: center; /* Centers the cards horizontally */
-    align-items: flex-start; /* Aligns the cards vertically */
-    gap: 100px; /* Adds space between the cards */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
     margin-top: 100px;
     margin-bottom: 100px;
 }
 .wings-card-container{
     display: flex;
-    justify-content: center; /* Centers the cards horizontally */
-    align-items: flex-start; /* Aligns the cards vertically */
-    gap: 100px; /* Adds space between the cards */
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 100px;
     margin-top: 100px;
     margin-bottom: 100px;
 }
-/* Basket List Items */
 #basket-items .list-group-item {
     color: white;
     background-color: #052234;
@@ -375,13 +369,11 @@ header{
     transition: background-color 0.3s ease, transform 0.2s ease;
     width: 90%;
 }
-/* Hover effect */
 #basket-items .list-group-item:hover {
     background-color: cornflowerblue;
-    transform: scale(1.02); /* zoom effect */
+    transform: scale(1.02);
     cursor: pointer;
 }
-/* Remove Button */
 #basket-items .remove-item {
     background-color: #dc3545;
     border: none;
@@ -392,7 +384,6 @@ header{
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-/* Remove Button Hover */
 #basket-items .remove-item:hover {
     background-color: #c82333; 
     transform: scale(1.1);
@@ -405,6 +396,7 @@ header{
     font-weight: bold;
     text-align: center;
 }
+/*Creates a line above Subtotal*/
 #subtotal-container::before {
     content: "";
     position: absolute;
@@ -449,7 +441,6 @@ header{
     transform: scale(0.95);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
-/* Auth Page Container */
 .auth-container {
     background-color: #052234;
     display: flex;
@@ -458,7 +449,6 @@ header{
     height: 100vh;
     /* z-index: -1; */
 }
-/* Authentication Box */
 .auth-box {
     background-color: #f4ca7e;
     padding: 40px;
@@ -467,12 +457,10 @@ header{
     text-align: center;
     /* z-index: -1; */
 }
-/* Form Title */
 .auth-box h2 {
     color: #052234;
     margin-bottom: 20px;
 }
-/* Input Fields */
 .input-group {
     text-align: left;
     margin-bottom: 15px;
@@ -491,7 +479,6 @@ header{
     border-radius: 6px;
     font-size: 16px;
 }
-/* Submit Button */
 .auth-btn {
     width: 100%;
     padding: 12px;
@@ -510,7 +497,6 @@ header{
     transform: translateY(-3px);
     box-shadow: 0px 6px 15px rgba(5, 34, 52, 0.7);
 }
-/* Toggle Signup/Login */
 .toggle-form {
     margin-top: 15px;
     font-size: 14px;

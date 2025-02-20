@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link type="text/css" rel = "stylesheet" href="style.css" />
+        <meta charset="UTF-8">
+        <link type="text/css" rel = "stylesheet" href="style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="nav.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,40 +36,41 @@
             });
         </script>
     </head>
-    <header>
-        <div class = "off-screen-menu">
-            <ul>
-                <li><a href="homepage.html" style = "text-decoration: none;">Home</a></li>
-                <li><a href="menu.html" style = "text-decoration: none;">Menu</a></li>
-                <li><a href="basket.html" style = "text-decoration: none;">Order</a></li>
-            </ul>
-        </div>
-        <div class = "nav">
-            <div class = "ham-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+    <body>
+        <header>
+            <div class = "off-screen-menu">
+                <ul>
+                    <li><a href="homepage.html" style = "text-decoration: none;">Home</a></li>
+                    <li><a href="menu.html" style = "text-decoration: none;">Menu</a></li>
+                    <li><a href="basket.html" style = "text-decoration: none;">Order</a></li>
+                </ul>
             </div>
-            <div class = "navbar-left">
-                <a href="homepage.html"></a><div>Home</div></a>
-                <a href="menu.html"><div>Menu</div></a>
-                <a href="basket.html"><div>Order</div></a>
+            <div class = "nav">
+                <div class = "ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class = "navbar-left">
+                    <a href="homepage.html"><div>Home</div></a>
+                    <a href="menu.html"><div>Menu</div></a>
+                    <a href="basket.html"><div>Order</div></a>
+                </div>
+                <div class = "navbar-right">
+                    <a href="login.html" id="sign-up" class="sign-up" style="text-decoration: none;">Sign up</a>
+                    <a href="login.html" id="direct-login" class="sign-in" style="text-decoration: none;">Sign in</a>
+                    <a href="login.html" id="logout" style="display:none; text-decoration: none;">Logout</a>
+                </div>
             </div>
-            <div class = "navbar-right">
-                <a href="login.html" id="sign-up" class="sign-up" style="text-decoration: none;">Sign up</a>
-                <a href="login.html" id="direct-login" class="sign-in" style="text-decoration: none;">Sign in</a>
-                <a href="login.html" id="logout" style="display:none;" style="text-decoration: none;">Logout</a>
-            </div>
-        </div>
-    </header>
-    <main>
-        <body>
+        </header>
+        <main>
                 <article class = "name">
                     <p>CHIKI CHING</p>
                 </article>
                 <div class = "logo"><img 
                     class = "block"
-                    src = "chikichinglogo.png">
+                    src = "chikichinglogo.png"
+                    alt = "Logo">
                 </div>
                 <section class="container text-center">
                     <article class="welcome">
@@ -104,7 +106,6 @@
                         </div>
                     </Section>
                 </Section>
-            </div>
+            </main>
         </body>
-    </main>
 </html>
